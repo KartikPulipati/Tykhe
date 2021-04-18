@@ -15,7 +15,7 @@ def signupuser(request):
                 user = User.objects.create_user(username=request.POST['username'], password=request.POST['password1'])
                 user.save()
                 login(request, user)
-                return redirect('home')
+                return redirect('listTodo')
             except IntegrityError:
                 return render(request, 'UserAuth/signupuser.html', {'form': UserCreationForm(),
                                                                     'UseError': 'Username Not Avaible, Please Enter A Different Username!'})
@@ -39,4 +39,4 @@ def loginuser(request):
             return render(request, 'UserAuth/loginuser.html', {'form': AuthenticationForm(), 'error': 'This User Does Not Exist, Please Try Again'})
         else:
             login(request, user)
-            return redirect('home')
+            return redirect('listTodo')
