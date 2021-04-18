@@ -1,0 +1,158 @@
+{% extends "display/base.html" %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Tykhe</title>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+       body {
+            background-color: #0a1222;
+        }
+
+        .desc {
+
+            width: 100vh;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 40px;
+            padding: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            justify-content: space-between;
+            margin: 10px;
+            padding: 10px;
+        }
+        .card-1 {
+            color: black;
+            background-color: #bbb7af;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            line-height: 29px;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+        }
+
+        .card-1 p {
+            font-size: 40px;
+            padding-top: 10px;
+            height: 15%;
+            padding-left: 575px;
+            margin-right: 10px;
+            margin-bottom:130px;
+            line-height: normal;
+        }
+
+        .main-container {
+            background-color: #0a1222;
+            height: 100%;
+            text-align: right;
+        }
+
+        .card {
+            background-color: #284c5f;
+            color: white;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            width: 40%;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .container {
+            padding: 2px 16px;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 10px;
+        }
+        #HASH {
+        display: flex;
+        justify-content: space-between;
+        }
+
+        .desc img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 60px;
+        margin-right: 100px;
+        }
+        .schedule {
+            position: absolute;
+        }
+
+        .organize {
+            position: absolute;
+            left: 0;
+            margin-top: 900px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+<div id="HASH">
+    <span class="desc"><span class="title">Tykhe </span> is an innovative organizational website for students that lets you organize your work effortlessly</span>
+    <span><img align="right" src="{% static 'display/img.png' %}" style="float:right;" width="125%"></span>
+</div>
+
+<div class="card-1 ">
+
+
+    <p class="" style="text-align: center;">
+        We all know that students are currently going through the toughest times of their lives. The pandemic
+        has greatly affected students and the way they do their work. Usually it was a simple, get your books
+        from your locker and go type of situation, but now everything is online.
+        All your classes are online, notifications from teachers are online, even your notes are online. The downside is
+        that most of these
+        are tough to remember. So we created a solution. It's called <strong>Tykhe</strong>.
+        Tykhe is an organizational tool that has been highly optimized for students. You can log and have all the info
+        for your online classes organized all in one place!
+
+
+    </p>
+
+
+</div>
+
+<div class="wrapper">
+    <div class="card">
+        <img alt="Avatar" src="{% static 'display/mes.png' %}" style="width: 100px;height: 100px;">
+        <div class="container">
+            <h4><b>Kartik Pulipati</b></h4>
+            <p>Lead Enginner</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img alt="Avatar" src="{% static 'display/mes2.png' %}" style="width: 100px;height: 100px;">
+        <div class="container">
+            <h4><b>Michelle Okolie</b></h4>
+            <p>Lead Designer</p>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>
+
+{% endblock %}

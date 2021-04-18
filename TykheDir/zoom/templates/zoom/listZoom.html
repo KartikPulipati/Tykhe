@@ -1,0 +1,29 @@
+{% extends "display/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<h2 class="container-fluid">You have {{ zoom.count }} Meeting{{ zoom.count|pluralize }}</h2>
+<br>
+<br>
+<div class="container-fluid">
+    {% for z in zoom %}
+<ul class="list-group">
+    <a href="{{ z.url }}">
+    <li class="list-group-item list-group-item-info d-flex"><p class="p-0 m-0 flex-grow-1">
+        {{ z.title }} - {{ z.time }}</p>
+        <form method="POST" action="{% url 'deleteZoom' z.pk %}">
+            {% csrf_token %}
+               <button type='submit' class="btn btn-danger">Delete</button>
+            </form>
+                </li>
+    <br>
+        </a>
+</ul>
+    {% endfor %}
+
+</div>
+<div style="text-align:center;">
+    <a href="{% url 'createZoom' %}"  class="btn btn-primary">Add</a>
+</div>
+{% endblock %}

@@ -1,0 +1,4 @@
+
+kpython:S1542"NRename function "listTodo" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÄˆÞ³ùÿÿÿÿ
+mpython:S1542"PRename function "createTodo" to match the regular expression ^[a-z_][a-z0-9_]*$.(ÐÑ˜»ûÿÿÿÿ
+hpython:S1542"PRename function "deleteTodo" to match the regular expression ^[a-z_][a-z0-9_]*$.(­Ù„¥

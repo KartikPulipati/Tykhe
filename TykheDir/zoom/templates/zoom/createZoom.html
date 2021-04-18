@@ -1,0 +1,16 @@
+{% extends "display/base.html" %}
+{% load static %}
+
+{% block content %}
+<br>
+<div class="container-fluid" >
+<form method='POST' action="{% url 'createZoom' %}">
+    <div class="form-group">
+    {% csrf_token %}
+    {{ form.as_p }}
+        <div style="text-align:center;"><button class="btn btn-success" type="submit">Create</button></div>
+
+    </div>
+</form>
+</div>
+{% endblock %}

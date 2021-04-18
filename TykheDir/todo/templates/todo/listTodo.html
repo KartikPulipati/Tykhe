@@ -1,0 +1,30 @@
+{% extends "display/base.html" %}
+
+{% block content %}
+<br>
+<br>
+<div class="container-fluid">
+    <h2 class="container-fluid">You have {{ todo.count }} Todo{{ todo.count|pluralize }}</h2>
+    <br>
+{% for t in todo %}
+
+<ul class="list-group">
+    <a href="{{ t.url }}">
+    <li class="list-group-item list-group-item-info d-flex"><p class="p-0 m-0 flex-grow-1">
+        {{ t.name }} - {{ t.due }}</p>
+        <form method="POST" action="{% url 'deleteTodo' t.pk %}">
+            {% csrf_token %}
+               <button type='submit' class="btn btn-success">Complete</button>
+            </form>
+                </li>
+    <br>
+        </a>
+</ul>
+
+{% endfor %}
+
+</div>
+<div style="text-align:center;">
+    <a href="{% url 'createTodo' %}" class="btn btn-info">Add</a>
+</div>
+{% endblock %}
