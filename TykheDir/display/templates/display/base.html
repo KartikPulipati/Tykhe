@@ -53,6 +53,12 @@
 
        font-family: 'Black Ops One', cursive;
        }
+
+       .btn {
+            color: black;
+            border-color: #0a1222;
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
@@ -63,6 +69,7 @@
         </button>
         <div class="navbar-collapse collapse w-100" id="collapsingNavbar2">
             <ul class="navbar-nav">
+                {% if user.is_authenticated %}
                 <li class="nav-item {% if request.resolver_match.url_name == 'listTodo' %}active{% endif %}">
 
                     {% if request.resolver_match.url_name == 'listTodo' %}<strong><a class="nav-link" href="{% url 'listTodo' %}">Todo</a></strong>
@@ -79,8 +86,8 @@
                     {% endif %}
                 </li>
 
-                {% if user.is_authenticated %}
-                  <li class="nav-item">
+
+                <li class="nav-item">
                        <a class="nav-link"> Signed In As: {{ user.username }}</a>
                 </li>
                 {% endif %}

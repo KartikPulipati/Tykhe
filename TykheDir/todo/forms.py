@@ -2,6 +2,7 @@ from django.forms import ModelForm
 from django import forms
 from .models import Todo
 
+
 class DateInput(forms.DateInput):
     input_type='date'
 
