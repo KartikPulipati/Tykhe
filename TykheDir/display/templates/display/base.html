@@ -78,10 +78,7 @@
 
                     {% endif %}
                 </li>
-                <li class="nav-item {% if request.resolver_match.url_name == '#' %}active{% endif %}">
-                     <a class="nav-link" href="#">Online Classes</a>
-                    {% if request.resolver_match.url_name == '#' %}<strong><a class="nav-link" href="#">Online Classes</a></strong>{% endif %}
-                </li>
+
                 {% if user.is_authenticated %}
                   <li class="nav-item">
                        <a class="nav-link"> Signed In As: {{ user.username }}</a>
